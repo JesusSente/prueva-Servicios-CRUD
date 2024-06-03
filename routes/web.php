@@ -20,3 +20,22 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::resource('clientes', App\Http\Controllers\ClienteController::class);
+
+Route::resource('servicios', App\Http\Controllers\ServicioController::class);
+
+Route::resource('equipos', App\Http\Controllers\EquipoController::class);
+
+Route::resource('marcas', App\Http\Controllers\MarcaController::class);
+
+Route::resource('tipoEquipos', App\Http\Controllers\TipoEquipoController::class);
+
+Route::resource('tecnicos', App\Http\Controllers\TecnicoController::class);
+
+Route::resource('estados', App\Http\Controllers\EstadoController::class);
+
+Route::resource('informeServicios', App\Http\Controllers\InformeServicioController::class);
+
+Route::resource('tipoServicios', App\Http\Controllers\TipoServicioController::class);
